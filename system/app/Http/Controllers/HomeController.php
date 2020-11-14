@@ -36,9 +36,16 @@ class HomeController extends Controller {
 		return view('blog');
 	}
 
-
 	function showDetailProduk(){
 		return view('detail_produk');
+	}
+
+	function showCart(){
+		return view('cart');
+	}
+
+	function showLogin(){
+		return view('login');
 	}
 
 }

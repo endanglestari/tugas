@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{url('public')}}/css/flaticon.css">
     <link rel="stylesheet" href="{{url('public')}}/css/icomoon.css">
     <link rel="stylesheet" href="{{url('public')}}/css/style.css">
+    
   </head>
   <body class="goto-here">
 		<div class="py-1 bg-primary">

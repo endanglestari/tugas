@@ -50,6 +50,7 @@
 		    </div>
 		  </div>
     </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="{{url('beranda')}}">Vegefoods</a>
@@ -71,7 +72,7 @@
               </div>
             </li>
 	          <li class="nav-item"><a href="{{url('about')}}" class="nav-link">About</a></li>
-	          <li class="nav-item active"><a href="{{url('blog)}}" class="nav-link">Blog</a></li>
+	          <li class="nav-item active"><a href="{{url('blog')}}" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="{{url('kontak')}}" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="{{url('login')}}" class="nav-link">Log Out</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>

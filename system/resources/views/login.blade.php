@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Login</title>
+  <title>Login User</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <style>
       body {
@@ -94,17 +94,17 @@ label {
      <div id="card"> 
         <div id="card-content">
             <div id="card-title">
-    <a href="{{url('template')}}"><h2>LOGIN</h2></a>
+    <a href="{{url('beranda')}}"><h2>LOGIN</h2></a>
     <div class="underline-title"></div>
          </div>
             </div>
-    <form action="{{url('template')}}" method="post" class="form"> 
+    <form action="{{url('beranda')}}" method="post" class="form"> 
         <label style="padding-top:30px">&nbsp;Email</label>
       <div class="form-border"></div>
     <label style="padding-top:22px">&nbsp;Password</label>
       <div class="form-border"></div>
     <a href="#"><legend id="forgot-pass">Forgot password?</legend></a>
-    <a href="{{url('template')}}" id="submit-btn" type="submit" name="submit">Login</a>
+    <a href="{{url('beranda')}}" id="submit-btn" type="submit" name="submit">Login</a>
         </form>
     </div>
 

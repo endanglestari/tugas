@@ -22,6 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('beranda', [HomeController::class, 'showBeranda']);
 Route::get('kontak', [HomeController::class, 'showKontak']);
 Route::get('produk', [HomeController::class, 'showProduk']);
