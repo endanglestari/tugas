@@ -64,18 +64,18 @@
               <li class="nav-item active dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="{{url('produk')}}">Shop</a>
-                <a class="dropdown-item" href="{{url('wishlist')}}">Wishlist</a>
+                <a class="dropdown-item" href="{{url('produk')}}">Kategori</a>
+                <a class="dropdown-item" href="{{url('wishlist')}}">Produk</a>
                 <a class="dropdown-item" href="{{url('detail_produk')}}">Single Product</a>
-                <a class="dropdown-item" href="cart.html">Cart</a>
-                <a class="dropdown-item" href="checkout.html">Checkout</a>
+                <a class="dropdown-item" href="{{url('cart')}}">Cart</a>
+                <a class="dropdown-item" href="{{url('checkout')}}">Checkout</a>
               </div>
             </li>
               <li class="nav-item"><a href="{{url('about')}}" class="nav-link">About</a></li>
               <li class="nav-item"><a href="{{url('blog')}}" class="nav-link">Blog</a></li>
               <li class="nav-item"><a href="{{url('kontak')}}" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="{{url('login')}}" class="nav-link">Log Out</a></li>
-              <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+              <li class="nav-item cta cta-colored"><a href="{{url('cart')}}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
             </ul>
           </div>
@@ -93,6 +93,34 @@
         </div>
       </div>
     </div>
+     <div class="col-md-12 mt-5">
+          <div class="card">
+            <div class="container">
+                <div class="card-header">
+              Filter
+            </div>
+            <div class="card-body">
+              <form action="{{url('kategori/filter')}}" method="post">
+                @csrf
+                <div class="form-group">
+                  <label for="" class="control-label">Jenis</label>
+                  <input type="text" class="form-control" name="jenis" value="{{$jenis ?? ""}}">
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label">Nama</label>
+                  <input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label">Stok</label>
+                  <input type="text" class="form-control" name="stok" value="{{$stok ?? ""}}">
+                </div>
+              
+                <button class="btn btn-success float-right"><i class="fa fa-search"></i> Filter</button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
     <section class="ftco-section">
         <div class="container">
@@ -115,10 +143,10 @@
                             <div class="overlay"></div>
                         </a>
                         <div class="text py-3 pb-4 px-3 text-center">
-                            <h3><a href="#">Bell Pepper</a></h3>
+                            <h3><a href="#">Paprika Kuning</a></h3>
                             <div class="d-flex">
                                 <div class="pricing">
-                                    <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+                                    <p class="price"><span class="mr-2 price-dc">30.00</span><span class="price-sale">20.00</span></p>
                                 </div>
                             </div>
                             <div class="bottom-area d-flex px-3">
@@ -146,7 +174,7 @@
                             <h3><a href="#">Strawberry</a></h3>
                             <div class="d-flex">
                                 <div class="pricing">
-                                    <p class="price"><span>$120.00</span></p>
+                                    <p class="price"><span>120.000</span></p>
                                 </div>
                             </div>
                             <div class="bottom-area d-flex px-3">
@@ -171,10 +199,10 @@
                             <div class="overlay"></div>
                         </a>
                         <div class="text py-3 pb-4 px-3 text-center">
-                            <h3><a href="#">Green Beans</a></h3>
+                            <h3><a href="#">Buncis</a></h3>
                             <div class="d-flex">
                                 <div class="pricing">
-                                    <p class="price"><span>$120.00</span></p>
+                                    <p class="price"><span>20.000</span></p>
                                 </div>
                             </div>
                             <div class="bottom-area d-flex px-3">
@@ -199,10 +227,10 @@
                             <div class="overlay"></div>
                         </a>
                         <div class="text py-3 pb-4 px-3 text-center">
-                            <h3><a href="#">Purple Cabbage</a></h3>
+                            <h3><a href="#">Kol Ungu</a></h3>
                             <div class="d-flex">
                                 <div class="pricing">
-                                    <p class="price"><span>$120.00</span></p>
+                                    <p class="price"><span>50.000</span></p>
                                 </div>
                             </div>
                             <div class="bottom-area d-flex px-3">
@@ -553,7 +581,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Endang Lestari</a>
                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
           </div>

@@ -66,16 +66,16 @@
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <a class="dropdown-item" href="{{url('produk')}}">Kategori</a>
                 <a class="dropdown-item" href="{{url('wishlist')}}">Produk</a>
-                <a class="dropdown-item" href="product-single.html">Single Product</a>
-                <a class="dropdown-item" href="cart.html">Cart</a>
-                <a class="dropdown-item" href="checkout.html">Checkout</a>
+                <a class="dropdown-item" href="{{url('detail_produk')}}">Single Product</a>
+                <a class="dropdown-item" href="{{url('cart')}}">Cart</a>
+                <a class="dropdown-item" href="{{url('checjout')}}">Checkout</a>
               </div>
             </li>
               <li class="nav-item"><a href="{{url('about')}}" class="nav-link">About</a></li>
               <li class="nav-item"><a href="{{url('blog')}}" class="nav-link">Blog</a></li>
               <li class="nav-item"><a href="{{url('kontak')}}" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="{{url('login')}}" class="nav-link">Log Out</a></li>
-              <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+              <li class="nav-item cta cta-colored"><a href="{{url('cart')}}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
             </ul>
           </div>
@@ -93,6 +93,36 @@
         </div>
       </div>
     </div>
+    <section>
+      <div class="col-md-12 mt-5">
+          <div class="card">
+            <div class="container">
+                <div class="card-header">
+              Filter
+            </div>
+            <div class="card-body">
+              <form action="{{url('kategori/filter')}}" method="post">
+                @csrf
+                <div class="form-group">
+                  <label for="" class="control-label">Jenis</label>
+                  <input type="text" class="form-control" name="jenis" value="{{$jenis ?? ""}}">
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label">Nama</label>
+                  <input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label">Stok</label>
+                  <input type="text" class="form-control" name="stok" value="{{$stok ?? ""}}">
+                </div>
+              
+                <button class="btn btn-success float-right"><i class="icon icon-search"></i>  Filter</button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
 
     <section class="ftco-section ftco-cart">
             <div class="container">
@@ -117,11 +147,11 @@
                                 <td class="image-prod"><div class="img" style="background-image:url({{url('public')}}/images/product-1.jpg);"></div></td>
                                 
                                 <td class="product-name">
-                                    <h3>Bell Pepper</h3>
+                                    <h3>Paprika</h3>
                                     <p>Far far away, behind the word mountains, far from the countries</p>
                                 </td>
                                 
-                                <td class="price">$4.90</td>
+                                <td class="price">Rp. 73.500</td>
                                 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
@@ -129,7 +159,7 @@
                                 </div>
                               </td>
                                 
-                                <td class="total">$4.90</td>
+                                <td class="total">Rp. 73.500</td>
                               </tr><!-- END TR-->
 
                               <tr class="text-center">
@@ -138,11 +168,11 @@
                                 <td class="image-prod"><div class="img" style="background-image:url({{url('public')}}/images/product-2.jpg);"></div></td>
                                 
                                 <td class="product-name">
-                                    <h3>Bell Pepper</h3>
+                                    <h3>Stawberry</h3>
                                     <p>Far far away, behind the word mountains, far from the countries</p>
                                 </td>
                                 
-                                <td class="price">$15.70</td>
+                                <td class="price">Rp. 235.500</td>
                                 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
@@ -150,7 +180,7 @@
                                 </div>
                               </td>
                                 
-                                <td class="total">$15.70</td>
+                                <td class="total">Rp. 235.500</td>
                               </tr><!-- END TR-->
 
                               <tr class="text-center">
@@ -180,11 +210,11 @@
                                 <td class="image-prod"><div class="img" style="background-image:url({{url('public')}}/images/product-4.jpg);"></div></td>
                                 
                                 <td class="product-name">
-                                    <h3>Bell Pepper</h3>
+                                    <h3>Kol Ungu</h3>
                                     <p>Far far away, behind the word mountains, far from the countries</p>
                                 </td>
                                 
-                                <td class="price">$15.70</td>
+                                <td class="price">Rp. 50.000</td>
                                 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
@@ -192,7 +222,7 @@
                                 </div>
                               </td>
                                 
-                                <td class="total">$15.70</td>
+                                <td class="total">Rp. 50.000</td>
                               </tr><!-- END TR-->
 
                               <tr class="text-center">
@@ -201,11 +231,11 @@
                                 <td class="image-prod"><div class="img" style="background-image:url({{url('public')}}/images/product-5.jpg);"></div></td>
                                 
                                 <td class="product-name">
-                                    <h3>Bell Pepper</h3>
+                                    <h3>Tomat</h3>
                                     <p>Far far away, behind the word mountains, far from the countries</p>
                                 </td>
                                 
-                                <td class="price">$15.70</td>
+                                <td class="price">Rp. 50.000</td>
                                 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
@@ -213,7 +243,7 @@
                                 </div>
                               </td>
                                 
-                                <td class="total">$15.70</td>
+                                <td class="total">Rp. 50.000</td>
                               </tr><!-- END TR-->
 
                               <tr class="text-center">
@@ -222,11 +252,11 @@
                                 <td class="image-prod"><div class="img" style="background-image:url({{url('public')}}/images/product-6.jpg);"></div></td>
                                 
                                 <td class="product-name">
-                                    <h3>Bell Pepper</h3>
+                                    <h3>Brokoli</h3>
                                     <p>Far far away, behind the word mountains, far from the countries</p>
                                 </td>
                                 
-                                <td class="price">$15.70</td>
+                                <td class="price">Rp. 50.000</td>
                                 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
@@ -234,7 +264,7 @@
                                 </div>
                               </td>
                                 
-                                <td class="total">$15.70</td>
+                                <td class="total">Rp. 50.000 </td>
                               </tr><!-- END TR-->
                             </tbody>
                           </table>
@@ -328,7 +358,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Endang Lestari</a>
                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
           </div>

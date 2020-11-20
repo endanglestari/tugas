@@ -26,6 +26,8 @@ Route::get('/', function () {
 Route::get('beranda', [HomeController::class, 'showBeranda']);
 Route::get('kontak', [HomeController::class, 'showKontak']);
 Route::get('produk', [HomeController::class, 'showProduk']);
+Route::post('produk/filter', [ProdukController::class, 'filter']);
+Route::post('wishlist/filter', [KategoriController::class, 'filter']);
 Route::get('cart', [HomeController::class, 'showCart']);
 Route::get('detail_produk', [HomeController::class, 'showDetailProduk']);
 Route::get('blog', [HomeController::class, 'showBlog']);

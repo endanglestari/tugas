@@ -185,12 +185,12 @@
               <div class="col-md-6">
                 <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({{url('public')}}/images/category-1.jpg);">
                   <div class="text px-3 py-1">
-                    <h2 class="mb-0"><a href="#">Fruits</a></h2>
+                    <h2 class="mb-0"><a href="#">vegetables</a></h2>
                   </div>
                 </div>
                 <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({{url('public')}}/images/category-2.jpg);">
                   <div class="text px-3 py-1">
-                    <h2 class="mb-0"><a href="#">Vegetables</a></h2>
+                    <h2 class="mb-0"><a href="#">Fruits</a></h2>
                   </div>
                 </div>
               </div>
@@ -227,7 +227,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
-              <a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+              <a href="#" class="img-prod"><img class="img-fluid" src="{{url('public')}}/images/product-1.jpg" alt="Colorlib Template">
                 <span class="status">30%</span>
                 <div class="overlay"></div>
               </a>
